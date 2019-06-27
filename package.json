@@ -1,11 +1,11 @@
 {
   "name": "@originalfunko/brickie",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "responsive masonry layout engine for react",
   "author": "greg archer <garcher@funko.com> (https://www.funko.com/)",
   "license": "MPL-2.0",
   "homepage": "https://github.com/OriginalFunko/brickie",
-  "main": "index.js",
+  "main": "build/index.js",
   "publishConfig": {
     "access": "public"
   },
