@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   text-align: left;
+  box-sizing: border-box;
 }
 .mask > .mason-container {
   mask-image: linear-gradient(to top, transparent 1rem, rgba(0, 0, 0, 1.0) 15rem);
@@ -12,8 +13,6 @@
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
-  outline: 1px solid;
-  padding: .5rem;
 }
 
 .mason-container.mason-columns-1 > * { width: 100% }
