@@ -1,0 +1,46 @@
+{
+  "name": "@originalfunko/brickie",
+  "version": "0.0.1",
+  "description": "responsive masonry layout engine for react",
+  "author": "greg archer <garcher@funko.com> (https://www.funko.com/)",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/OriginalFunko/brickie",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OriginalFunko/brickie.git"
+  },
+  "peerDependencies": {
+    "react": ">15"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --mode development"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.0",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.0.4",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
