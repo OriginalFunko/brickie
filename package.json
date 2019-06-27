@@ -1,6 +1,6 @@
 {
   "name": "@originalfunko/brickie",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "responsive masonry layout engine for react",
   "author": "greg archer <garcher@funko.com> (https://www.funko.com/)",
   "license": "MPL-2.0",
