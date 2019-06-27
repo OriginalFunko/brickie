@@ -1,5 +1,9 @@
 ![Funko Brickie](https://raw.githubusercontent.com/OriginalFunko/brickie/master/funko-brickie.png)
 # Funko Brickie
+[![License: MPL 2.0](https://img.shields.io/npm/l/@originalfunko/brickie.svg?color=rgb%2868%2C%20204%2C%2017%29)](https://opensource.org/licenses/MPL-2.0)
+[![minZip size](https://img.shields.io/bundlephobia/minzip/@originalfunko/brickie@0.0.3.svg?color=rgb%2868%2C%20204%2C%2017%29)](https://bundlephobia.com/result?p=@originalfunko/brickie@0.0.3)
+![GitHub issues](https://img.shields.io/github/issues/originalfunko/brickie.svg?color=rgb%2868%2C%20204%2C%2017%29)
+![npm](https://img.shields.io/npm/v/@originalfunko/brickie.svg?color=rgb%2868%2C%20204%2C%2017%29)
 
 Responsive masonry layout engine for react
 
