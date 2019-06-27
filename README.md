@@ -2,6 +2,8 @@
 
 Responsive masonry layout engine for react
 
+**demo**: coming soon.
+
 # Setup
 
 In the console
@@ -26,7 +28,7 @@ const responsiveConfig = [
   { breakpoint: 480, columns: 1 } 
 ]
 
-<Brickie columns={3} responsive={responsiveConfig} >
+<Brickie columns={4} responsive={responsiveConfig} >
     [items]
 </Brickie>
 
@@ -37,3 +39,7 @@ const responsiveConfig = [
     [items]
 </Brickie>
 ```
+
+* **items**: HTML elements to arrange.
+* **columns**: default number of columns
+* **responsive**: array of break points, and the number of columns for that breakpoint.
