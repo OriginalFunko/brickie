@@ -13,21 +13,21 @@ export default class Brickie extends Component {
       visibleRows: this.props.visibleRows || DEFAULT_COLUMNS
     }
   }
-  
+
   scrollToPagination = () => {
     this.refs.pagination.scrollIntoView({ behavior: 'smooth' })
   }
-  
+
   showMore = () => {
     this.setState({ visibleRows: this.state.visibleRows + (this.props.visibleRows || DEFAULT_COLUMNS) }, this.scrollToPagination)
   }
-  
+
   componentWillReceiveProps (nextProps) {
     if (nextProps.layout !== this.props.layout) {
       this.setState = ({ visibleRows: this.props.visibleRows })
     }
   }
-  
+
   componentDidMount () {
     this.resizeObserver = new ResizeObserver(() => { this.positionChildren() })
     this.resizeObserver.observe(this.refs.container)
@@ -37,16 +37,16 @@ export default class Brickie extends Component {
       this.listenForImages()
     }, 0))
   }
-  
+
   componentDidUpdate () {
     this.positionChildren()
     this.listenForImages()
   }
-  
+
   loadListener = () => {
     this.positionChildren()
   }
-  
+
   listenForImages = () => {
     const images = nodesToArray(this.refs.container.getElementsByTagName('img'))
     
@@ -55,7 +55,7 @@ export default class Brickie extends Component {
       !img.complete && img.addEventListener('error', this.loadListener)
     })
   }
-  
+
   componentWillUnmount = () => {
     const images = nodesToArray(this.refs.container.getElementsByTagName('img'))
     images.forEach(img => {
@@ -64,7 +64,7 @@ export default class Brickie extends Component {
     })
     this.resizeObserver.disconnect()
   }
-  
+
   positionChildren = () => {
     const defaultColumns = +this.props.columns || 1
     const defaultBreakPoint = { breakpoint: Infinity, columns: defaultColumns }
@@ -76,15 +76,15 @@ export default class Brickie extends Component {
     const columns = +breakPoint.columns
     const columnDebt = new Array(columns).fill(0)
     const children = [].slice.call(this.refs.container.children)
-    
+
     container.setAttribute('class', `mason-container mason-columns-${columns}`)
-    
+
     if (columns === 1) {
       children.forEach(child => (child.style.transform = 'none'))
       container.style.height = 'auto'
       return
     }
-    
+
     children.forEach((child, index) => {
       const column = index % columns
       const rowChildren = children.slice(index - column, index - column + columns)
@@ -115,11 +115,11 @@ export default class Brickie extends Component {
     const items = this.props.children
     const allItemsVisible = items.length > numToShow
     const defaultButton = <button tabIndex='0' onClick={this.showMore} className='mason-button' >show more</button>
-    const providedButton = this.props.showMoreButton && React.cloneElement(this.props.showMoreButton, {onClick: this.showMore()} )
+    const providedButton = this.props.showMoreButton && React.cloneElement(this.props.showMoreButton, { onClick: this.showMore() })
     const showMoreButton = providedButton || defaultButton
     
     return <div className={`${allItemsVisible ? 'mask' : ''}`}>
-      <div key='container' className={`mason-container`}  ref='container'>
+      <div key='container' className={`mason-container`} ref='container'>
         {this.props.children.slice(0, numToShow)}
       </div>
       <div key='pagination' ref='pagination' className='pagination-controls small-12 text-center'>
