@@ -1,3 +1,4 @@
+![Funko Brickie](master/funko-brickie.png)
 # Funko Brickie
 
 Responsive masonry layout engine for react
